@@ -1,0 +1,125 @@
+<!-- templates/components/section4.html -->
+<section class="ripple-section">
+  <div class="section-header">
+    <h2>The Ripple Effect</h2>
+    <p>When you help one person, the impact spreads far beyond what you can see</p>
+  </div>
+
+  <div class="ripple-stats">
+    <div class="stat-card blue">
+      <h3>89%</h3>
+      <p>of people who receive help go on to help others</p>
+    </div>
+
+    <div class="stat-card purple">
+      <h3>3.2x</h3>
+      <p>more likely to report life satisfaction</p>
+    </div>
+
+    <div class="stat-card orange">
+      <h3>47%</h3>
+      <p>reduction in stress for both helper and helped</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ripple-section {
+    background: #ffffff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 80px 5%;
+  }
+
+  .ripple-section .section-header {
+    margin-bottom: 40px;
+  }
+
+  .ripple-section .section-header h2 {
+    color: #111827;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .ripple-section .section-header p {
+    color: #4B5563;
+    font-size: 16px;
+  }
+
+  .ripple-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .stat-card {
+    flex: 1 1 300px;
+    max-width: 380px;
+    border-radius: 24px;
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  .stat-card h3 {
+    font-size: 36px;
+    color: #111827;
+    margin-bottom: 8px;
+  }
+
+  .stat-card p {
+    color: #374151;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Gradient Variants */
+  .stat-card.blue {
+    background: linear-gradient(135deg, #EFF6FF 0%, #ECFEFF 100%);
+    outline-color: #DBEAFE;
+  }
+
+  .stat-card.purple {
+    background: linear-gradient(135deg, #FAF5FF 0%, #FDF2F8 100%);
+    outline-color: #F3E8FF;
+  }
+
+  .stat-card.orange {
+    background: linear-gradient(180deg, #FFF7ED 0%, #FFF1F2 100%);
+    outline-color: #FFEDD4;
+  }
+
+  /* 📱 Responsive Tweaks */
+  @media (max-width: 768px) {
+    .ripple-section {
+      padding: 60px 20px;
+    }
+
+    .ripple-section .section-header h2 {
+      font-size: 22px;
+    }
+
+    .stat-card h3 {
+      font-size: 30px;
+    }
+
+    .stat-card p {
+      font-size: 15px;
+    }
+  }
+</style>

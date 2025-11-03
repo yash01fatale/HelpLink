@@ -1,0 +1,257 @@
+<header class="header">
+  <div class="header-inner">
+    <!-- Left Section -->
+    <div class="left-section">
+      <button class="menu-btn" aria-label="Menu" id="menuToggle">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path
+            d="M2.66667 3.33333H13.3333M2.66667 8H13.3333M2.66667 12.6667H13.3333"
+            stroke="#0A0A0A"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+
+      <div class="logo-box">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path
+            d="M2 9.5C2.00002 8.3872 2.33759 7.30058 2.96813 6.38366C3.59867 5.46674 4.49252 4.76266 5.53161 4.3644C6.5707 3.96614 7.70616 3.89244 8.78801 4.15304C9.86987 4.41364 10.8472 4.99628 11.591 5.824C11.6434 5.88001 11.7067 5.92467 11.7771 5.9552C11.8474 5.98573 11.9233 6.00148 12 6.00148C12.0767 6.00148 12.1526 5.98573 12.2229 5.9552C12.2933 5.92467 12.3566 5.88001 12.409 5.824C13.1504 4.9909 14.128 4.40337 15.2116 4.1396C16.2952 3.87584 17.4335 3.94835 18.4749 4.34748C19.5163 4.74662 20.4114 5.45345 21.0411 6.3739C21.6708 7.29435 22.0053 8.38476 22 9.5C22 11.79 20.5 13.5 19 15L13.508 20.313C13.3217 20.527 13.0919 20.6989 12.834 20.8173C12.5762 20.9357 12.296 20.9978 12.0123 20.9996C11.7285 21.0014 11.4476 20.9428 11.1883 20.8277C10.9289 20.7126 10.697 20.5436 10.508 20.332L5 15C3.5 13.5 2 11.8 2 9.5Z"
+            fill="white"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+
+      <span class="brand-name">HelpLink</span>
+    </div>
+
+    <!-- Right Section -->
+    <button class="profile-btn" aria-label="Profile" onclick="window.location.href='/profile'">
+      <svg viewBox="0 0 16 16" fill="none">
+        <path
+          d="M12.6667 14V12.6667C12.6667 11.9594 12.3858 11.2811 11.8857 10.781C11.3856 10.281 10.7073 10 10 10H6.00004C5.2928 10 4.61452 10.281 4.11442 10.781C3.61433 11.2811 3.33337 11.9594 3.33337 12.6667V14"
+          stroke="#0A0A0A"
+          stroke-width="1.3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M8.00004 7.33333C9.4728 7.33333 10.6667 6.13943 10.6667 4.66667C10.6667 3.19391 9.4728 2 8.00004 2C6.52728 2 5.33337 3.19391 5.33337 4.66667C5.33337 6.13943 6.52728 7.33333 8.00004 7.33333Z"
+          stroke="#0A0A0A"
+          stroke-width="1.3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Sidebar Menu -->
+  <div class="side-menu" id="sideMenu">
+    <div class="side-menu-inner">
+      <button class="close-btn" id="closeMenu">&times;</button>
+      <nav class="menu-nav">
+        <a href="/" class="menu-item">🏠 Home</a>
+        <a href="/requests" class="menu-item">📦 Requests</a>
+        <!--<a href="/chat" class="menu-item">💬 Chat</a>-->
+        <a href="/settings" class="menu-item">⚙️ Settings</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<style>
+  /* Header */
+  .header {
+    width: 100%;
+    height: 72px;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.08);
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+  }
+  .header svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: block;
+}
+.logo-box svg {
+  width: 20px;
+  height: 20px;
+}
+
+  .header-inner {
+    width: 100%;
+    height: 100%;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .left-section {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .menu-btn,
+.profile-btn {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+  .menu-btn:hover,
+  .profile-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  .logo-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff2056 0%, #ff6900 100%);
+  }
+
+  .brand-name {
+    color: #1e293b;
+    font-family: "Arimo", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  /* Sidebar */
+  .side-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    align-items: stretch;
+    justify-content: flex-start;
+    transition: opacity 0.3s ease;
+    z-index: 200;
+  }
+
+  .side-menu.active {
+    display: flex;
+  }
+
+  .side-menu-inner {
+    width: 260px;
+    background: #ffffff;
+    height: 100vh;
+    padding: 24px 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+    animation: slideIn 0.3s forwards;
+    position: relative;
+    z-index: 999;
+  }
+
+  @keyframes slideIn {
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .menu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu-item {
+    color: #1e293b;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: background 0.2s ease, transform 0.1s ease;
+  }
+
+  .menu-item:hover {
+    background: rgba(255, 105, 0, 0.1);
+    transform: translateX(3px);
+  }
+
+  .menu-item.active {
+    background: linear-gradient(90deg, #ff2056 0%, #ff6900 100%);
+    color: white;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .header-inner {
+      padding: 0 16px;
+    }
+
+    .brand-name {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .brand-name {
+      display: none;
+    }
+
+    .menu-btn,
+    .profile-btn {
+      width: 32px;
+      height: 32px;
+    }
+  }
+</style>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const sideMenu = document.getElementById("sideMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  menuToggle.addEventListener("click", () => {
+    sideMenu.classList.add("active");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    sideMenu.classList.remove("active");
+  });
+
+  sideMenu.addEventListener("click", (e) => {
+    if (e.target === sideMenu) sideMenu.classList.remove("active");
+  });
+</script>

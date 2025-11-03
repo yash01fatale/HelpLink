@@ -1,0 +1,202 @@
+<!-- templates/components/section3.html -->
+<section class="stories-section">
+  <div class="section-header">
+    <h2>Stories of Kindness</h2>
+    <p>Real people, real impact, real connections</p>
+  </div>
+
+  <div class="stories-grid">
+    <div class="story-card">
+      <img src="images/story1.jpg" alt="A Listening Ear Changed Everything">
+      <div class="story-content">
+        <span class="tag">Loneliness</span>
+        <h3>A Listening Ear Changed Everything</h3>
+        <p class="quote">"I was going through the toughest time of my life. A neighbor I barely knew offered to just listen. That conversation pulled me back from the edge."</p>
+        <p class="author">— Margaret, 72</p>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <img src="images/story2.jpg" alt="From Panic to Peace">
+      <div class="story-content">
+        <span class="tag">Stress Handling</span>
+        <h3>From Panic to Peace</h3>
+        <p class="quote">"During a panic attack in the grocery store, a stranger stayed with me and helped me breathe until I felt safe. That kindness restored my faith in humanity."</p>
+        <p class="author">— David, Helper</p>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <img src="images/story3.jpg" alt="The Garden That Healed Us">
+      <div class="story-content">
+        <span class="tag">Community</span>
+        <h3>The Garden That Healed Us</h3>
+        <p class="quote">"After losing my wife, I couldn’t leave the house. Neighbors came together to help with my overgrown garden. Working alongside them slowly brought me back to the world."</p>
+        <p class="author">— Robert, 68</p>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <img src="images/story4.jpg" alt="A Conversation That Saved a Life">
+      <div class="story-content">
+        <span class="tag">Community Care</span>
+        <h3>A Conversation That Saved a Life</h3>
+        <p class="quote">"I noticed my elderly neighbor hadn’t picked up his mail. I knocked to check on him—he’d fallen and couldn’t reach his phone. Paramedics said another hour might’ve been too late."</p>
+        <p class="author">— Sarah, 34</p>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <img src="images/story5.jpg" alt="Teaching Taught Me More">
+      <div class="story-content">
+        <span class="tag">Communication</span>
+        <h3>Teaching Taught Me More</h3>
+        <p class="quote">"I started tutoring a struggling student. But in teaching them to communicate clearly, I learned patience and found my own voice. Now I’ve made a lifelong friend."</p>
+        <p class="author">— Emma, Volunteer Tutor</p>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <img src="images/story6.jpg" alt="Cooking Together, Healing Together">
+      <div class="story-content">
+        <span class="tag">Loneliness</span>
+        <h3>Cooking Together, Healing Together</h3>
+        <p class="quote">"After my divorce, I was isolated and depressed. A neighbor invited me to cook dinner together weekly. Those meals weren’t just food—they were connection and laughter."</p>
+        <p class="author">— Michael, 45</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .stories-section {
+    background: linear-gradient(180deg, #FFF1F2 0%, #FFF7ED 100%);
+    padding: 80px 5%;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+  }
+
+  .section-header {
+    margin-bottom: 48px;
+  }
+
+  .section-header h2 {
+    color: #111827;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .section-header p {
+    color: #4B5563;
+    font-size: 16px;
+  }
+
+  .stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    justify-items: center;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .story-card {
+    background: white;
+    border-radius: 28px;
+    box-shadow: 0px 8px 10px -6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 20px -8px rgba(0, 0, 0, 0.12);
+  }
+
+  .story-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .story-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  .story-content .tag {
+    display: inline-block;
+    background: #FFE4E6;
+    color: #BE123C;
+    border-radius: 9999px;
+    font-size: 14px;
+    padding: 2px 12px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+  }
+
+  .story-content h3 {
+    font-size: 20px;
+    color: #111827;
+    margin-bottom: 12px;
+  }
+
+  .story-content .quote {
+    font-size: 16px;
+    color: #4B5563;
+    font-style: italic;
+    margin-bottom: 8px;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+
+  .story-content .author {
+    font-size: 16px;
+    color: #1F2937;
+    margin-top: auto;
+  }
+
+  /* Ensure all cards are same height */
+  .story-card {
+    min-height: 550px;
+  }
+
+  /* 📱 Responsive Tweaks */
+  @media (max-width: 768px) {
+    .stories-section {
+      padding: 60px 20px;
+    }
+
+    .section-header h2 {
+      font-size: 22px;
+    }
+
+    .stories-grid {
+      gap: 20px;
+    }
+
+    .story-card img {
+      height: 200px;
+    }
+
+    .story-content {
+      padding: 20px;
+    }
+
+    .story-card {
+      min-height: 500px;
+    }
+  }
+</style>

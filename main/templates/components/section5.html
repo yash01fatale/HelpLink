@@ -1,0 +1,105 @@
+<!-- templates/components/section5.html -->
+<section class="cta-section">
+  <div class="cta-container">
+    <div class="cta-icon">
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.33333 25.3333C5.33338 22.3658 6.23358 19.4682 7.91502 17.023C9.59646 14.5779 11.98 12.7004 14.751 11.6383C17.5219 10.5763 20.5497 10.3798 23.4347 11.0747C26.3196 11.7697 28.9259 13.3234 30.9093 15.5306C31.049 15.68 31.2179 15.7991 31.4055 15.8805C31.5931 15.9619 31.7955 16.0039 32 16.0039C32.2045 16.0039 32.4068 15.9619 32.5945 15.8805C32.7821 15.7991 32.951 15.68 33.0907 15.5306C35.0678 13.309 37.6747 11.7423 40.5644 11.0389C43.454 10.3355 46.4893 10.5289 49.2663 11.5932C52.0433 12.6576 54.4303 14.5425 56.1096 16.997C57.7889 19.4515 58.6808 22.3593 58.6667 25.3333C58.6667 31.4399 54.6667 35.9999 50.6667 39.9999L36.0213 54.1679C35.5244 54.7386 34.9118 55.197 34.2241 55.5127C33.5364 55.8284 32.7894 55.9942 32.0328 55.999C31.2761 56.0038 30.5271 55.8475 29.8354 55.5405C29.1438 55.2336 28.5254 54.783 28.0213 54.2186L13.3333 39.9999C9.33333 35.9999 5.33333 31.4666 5.33333 25.3333Z" fill="white" stroke="white" stroke-width="5.33333" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="cta-text">
+      <h2>Ready to Make a Difference?</h2>
+      <p>Join thousands of people who are already making their communities better, one small act at a time.</p>
+    </div>
+
+    <button class="cta-button" aria-label="Start Helping Now" onclick="window.location.href='/login'">
+      Start Helping Now
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.33331 8H12.6666" stroke="#E11D48" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8 3.33325L12.6667 7.99992L8 12.6666" stroke="#E11D48" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</section>
+
+<style>
+  .cta-section {
+    background: linear-gradient(180deg, #F43F5E 0%, #F97316 100%);
+    padding: 80px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cta-container {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .cta-icon svg {
+    width: 64px;
+    height: 64px;
+  }
+
+  .cta-text h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    margin: 12px 0 8px 0;
+  }
+
+  .cta-text p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    line-height: 1.5;
+  }
+
+  .cta-button {
+    background: #fff;
+    color: #E11D48;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    background: #ffe6eb;
+  }
+
+  /* 📱 Responsive Design */
+  @media (max-width: 768px) {
+    .cta-section {
+      padding: 60px 20px;
+    }
+
+    .cta-text h2 {
+      font-size: 22px;
+    }
+
+    .cta-text p {
+      font-size: 15px;
+    }
+
+    .cta-icon svg {
+      width: 48px;
+      height: 48px;
+    }
+  }
+</style>

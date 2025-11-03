@@ -1,0 +1,126 @@
+<!-- templates/components/section2.html -->
+<section class="section-why-help">
+  <div class="section-header">
+    <h2>Why Should You Help?</h2>
+    <p>
+      Helping others isn't just good for them—it transforms you and creates a better world for everyone.
+    </p>
+  </div>
+
+  <div class="card-container">
+    <div class="help-card">
+      <div class="icon">🏘️</div>
+      <h3>Build Stronger Communities</h3>
+      <p>Every act of kindness strengthens the bonds that make our neighborhoods safer and more connected.</p>
+    </div>
+
+    <div class="help-card">
+      <div class="icon">✨</div>
+      <h3>Make a Real Difference</h3>
+      <p>Small actions can have profound impacts. Your help can change someone's entire day—or even their life.</p>
+    </div>
+
+    <div class="help-card">
+      <div class="icon">🌊</div>
+      <h3>Create Positive Ripples</h3>
+      <p>When you help someone, they're more likely to help others. Be the start of a chain reaction of kindness.</p>
+    </div>
+
+    <div class="help-card">
+      <div class="icon">💝</div>
+      <h3>Find Purpose & Fulfillment</h3>
+      <p>Research shows helping others boosts happiness and life satisfaction more than almost anything else.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+    .section-why-help {
+        background: white;
+        padding: 80px 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+        font-family: 'Arimo', sans-serif;
+    }
+
+    .section-why-help .section-header {
+        text-align: center;
+        max-width: 700px;
+    }
+
+    .section-why-help .section-header h2 {
+        color: #101828;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.4;
+        margin-bottom: 8px;
+    }
+
+    .section-why-help .section-header p {
+        color: #4A5565;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .help-card {
+        background: linear-gradient(135deg, white 0%, #F9FAFB 100%);
+        border: 1px solid #E5E7EB;
+        border-radius: 16px;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        transition: all 0.3s ease;
+    }
+
+    .help-card:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        transform: translateY(-4px);
+    }
+
+    .help-card .icon {
+        font-size: 48px;
+        line-height: 1;
+    }
+
+    .help-card h3 {
+        color: #101828;
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .help-card p {
+        color: #4A5565;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    /* 📱 Responsive Tweaks */
+    @media (max-width: 768px) {
+        .section-why-help {
+            padding: 60px 20px;
+    }
+
+    .section-why-help .section-header h2 {
+        font-size: 20px;
+    }
+
+    .card-container {
+        gap: 16px;
+    }
+
+    .help-card {
+        padding: 24px;
+    }
+    }
+</style>

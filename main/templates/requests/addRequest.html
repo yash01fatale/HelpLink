@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Section 1 – Header and Add Request Button -->
+<section class="bg-gradient-to-br from-orange-50 via-rose-50 to-purple-50 pt-24 pb-12 px-4">
+  <div class="container mx-auto max-w-7xl">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
+      <div>
+        <h1 class="text-gray-900 mb-2 text-2xl font-semibold">Help Requests</h1>
+        <p class="text-gray-600">
+          {{ requests|length }} {% if requests|length == 1 %}person{% else %}people{% endif %} need your help
+        </p>
+      </div>
+      <button id="openAddRequest"
+        class="bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white shadow-lg rounded-md px-4 py-2 flex items-center gap-2 transition">
+        <span class="text-lg">➕</span> Add Request
+      </button>
+    </div>
+
+    <!-- Categories Row (Responsive, No Horizontal Scroll) -->
+    <div class="flex flex-wrap items-center gap-2 pb-4">
+      <span class="text-gray-500 text-lg">🔍</span>
+      {% for category in categories %}
+      <span
+        class="cursor-pointer whitespace-nowrap px-3 py-1 rounded-full border text-sm transition-all
+        {% if selected_category == category or category == 'All' and not selected_category %}
+          bg-gradient-to-r from-rose-500 to-orange-500 text-white border-transparent
+        {% else %}
+          border-gray-300 hover:bg-gray-100 text-gray-700
+        {% endif %}">
+        {{ category }}
+      </span>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Section 2 – Responsive Request Cards -->
+<section class="bg-gradient-to-br from-orange-50 via-rose-50 to-purple-50 pb-20 px-4">
+  <div class="container mx-auto max-w-7xl">
+    <h2 class="text-center text-2xl md:text-3xl font-semibold text-gray-900 mb-10">
+      Active Help Requests
+    </h2>
+
+    {% if requests %}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for req in requests %}
+      <div
+        class="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between h-full">
+        <!-- Card Header -->
+        <div class="p-6 flex flex-col gap-2">
+          <div class="flex items-center justify-between mb-2">
+            <span class="px-3 py-1 rounded-full text-xs font-medium 
+              {% if req.urgency == 'high' %}
+                bg-gradient-to-r from-rose-500 to-orange-500 text-white
+              {% elif req.urgency == 'medium' %}
+                bg-yellow-100 text-yellow-800
+              {% else %}
+                bg-green-100 text-green-800
+              {% endif %}">
+              {{ req.urgency|title }}
+            </span>
+            <p class="text-gray-400 text-sm">{{ req.timeAgo }}</p>
+          </div>
+
+          <h3 class="text-lg font-semibold text-gray-900 line-clamp-2">{{ req.title }}</h3>
+          <p class="text-gray-600 text-sm line-clamp-3">{{ req.description }}</p>
+        </div>
+
+        <!-- Card Footer -->
+        <div
+          class="border-t border-gray-100 p-4 flex items-center justify-between bg-gray-50 rounded-b-2xl">
+          <div class="flex items-center gap-3">
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-rose-500 to-orange-500 text-white font-medium">
+              {{ req.requester_initials }}
+            </div>
+            <div>
+              <p class="text-gray-800 font-medium text-sm">{{ req.requester_name }}</p>
+              <p class="text-gray-500 text-xs">{{ req.location }}</p>
+            </div>
+          </div>
+          <button
+            class="bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow transition">
+            Accept
+          </button>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="text-center py-20">
+      <p class="text-gray-600 mb-4">No requests available at the moment</p>
+      <button class="border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-100">
+        Refresh
+      </button>
+    </div>
+    {% endif %}
+  </div>
+
+  {% include "requests/addRequest.html" %}
+</section>
+
+{% endblock %}
